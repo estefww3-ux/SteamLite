@@ -1,0 +1,111 @@
+[
+  {
+    "id": "neon-snake",
+    "title": "Neon Snake",
+    "price": 4.99,
+    "genre": "Arcade",
+    "tagline": "La serpiente de siempre, ahora con luces.",
+    "description": "Guía a la serpiente, come para crecer y evita chocar con las paredes o con tu propia cola.",
+    "controls": "Flechas o WASD para girar.",
+    "rating": 4.6,
+    "releaseDate": "2024-03-12",
+    "emoji": "🐍",
+    "colors": ["#12c2a6", "#1b2a6b"],
+    "gameKey": "snake",
+    "featured": true,
+    "reviews": [
+      { "user": "Lucía", "rating": 5, "text": "Muy adictivo." },
+      { "user": "Marco", "rating": 4, "text": "Clásico bien hecho." }
+    ]
+  },
+  {
+    "id": "pong-rivals",
+    "title": "Pong Rivals",
+    "price": 3.99,
+    "genre": "Deportes",
+    "tagline": "Primero en llegar a 5 puntos gana.",
+    "description": "Duelo de paletas contra una IA exigente. La bola acelera con cada golpe.",
+    "controls": "Flechas o W/S.",
+    "rating": 4.4,
+    "releaseDate": "2024-05-02",
+    "emoji": "🏓",
+    "colors": ["#ff7a59", "#7b2cbf"],
+    "gameKey": "pong",
+    "featured": true,
+    "reviews": [
+      { "user": "Andrea", "rating": 4, "text": "La IA es justa pero exigente." }
+    ]
+  },
+  {
+    "id": "brick-breaker",
+    "title": "Brick Breaker",
+    "price": 5.99,
+    "genre": "Arcade",
+    "tagline": "Rompe cada ladrillo sin dejar caer la bola.",
+    "description": "Tienes tres vidas para limpiar el muro. Controla el ángulo con la paleta.",
+    "controls": "Flechas izquierda/derecha.",
+    "rating": 4.7,
+    "releaseDate": "2024-07-19",
+    "emoji": "🧱",
+    "colors": ["#f9c74f", "#d62828"],
+    "gameKey": "breakout",
+    "featured": true,
+    "reviews": [
+      { "user": "Valeria", "rating": 5, "text": "Los rebotes se sienten muy bien." }
+    ]
+  },
+  {
+    "id": "memory-match",
+    "title": "Memory Match",
+    "price": 2.99,
+    "genre": "Puzzle",
+    "tagline": "Encuentra las 8 parejas en el menor número de intentos.",
+    "description": "Voltea las cartas, recuerda dónde está cada símbolo y completa todas las parejas.",
+    "controls": "Haz clic o toca las cartas.",
+    "rating": 4.2,
+    "releaseDate": "2024-02-08",
+    "emoji": "🧠",
+    "colors": ["#4cc9f0", "#4361ee"],
+    "gameKey": "memory",
+    "featured": false,
+    "reviews": [
+      { "user": "Camila", "rating": 4, "text": "Relajante y con buen ritmo." }
+    ]
+  },
+  {
+    "id": "tres-en-raya",
+    "title": "Tres en Raya",
+    "price": 0,
+    "genre": "Estrategia",
+    "tagline": "Gratis. Tú juegas con X, la máquina con O.",
+    "description": "El clásico contra una IA que bloquea tus jugadas.",
+    "controls": "Haz clic en una casilla vacía.",
+    "rating": 4.0,
+    "releaseDate": "2024-01-15",
+    "emoji": "❌",
+    "colors": ["#90be6d", "#277da1"],
+    "gameKey": "tictactoe",
+    "featured": false,
+    "reviews": [
+      { "user": "Sofía", "rating": 4, "text": "Sencillo, gratis y la IA sí bloquea." }
+    ]
+  },
+  {
+    "id": "sky-flap",
+    "title": "Sky Flap",
+    "price": 1.99,
+    "genre": "Casual",
+    "tagline": "Un toque, un aleteo, ningún error.",
+    "description": "Mantén al ave en el aire pasando entre tuberías.",
+    "controls": "Barra espaciadora o toca la pantalla.",
+    "rating": 4.1,
+    "releaseDate": "2024-09-27",
+    "emoji": "🐦",
+    "colors": ["#a0e7e5", "#ff6b9d"],
+    "gameKey": "flappy",
+    "featured": false,
+    "reviews": [
+      { "user": "Raúl", "rating": 4, "text": "Frustrante en el buen sentido." }
+    ]
+  }
+]
