@@ -22,3 +22,10 @@
 @media (pointer: coarse), (max-width: 760px) {
   .dpad { display: grid; }
 }
+
+/* Memory */
+.memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; padding: .7rem; background: #0d0e18; border: 1px solid var(--line); border-radius: 12px; }
+.mem-card { aspect-ratio: 1; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); font-size: clamp(1.4rem, 6vw, 2.2rem); cursor: pointer; }
+.mem-card:hover { background: var(--line); }
+.mem-card.show { background: var(--surface); color: var(--text); border-color: var(--teal); }
+.mem-card.matched { opacity: .6; border-color: var(--pink); cursor: default; }
