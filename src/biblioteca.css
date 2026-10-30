@@ -1,0 +1,15 @@
+/* ===== Biblioteca y pantalla de juego ===== */
+.owned-badge { display: inline-flex; align-items: center; gap: .3rem; color: var(--teal); font-weight: 600; font-size: .9rem; }
+.library-grid { margin-top: 1rem; }
+
+.play-layout { display: grid; grid-template-columns: 1fr 280px; gap: 1.5rem; align-items: start; margin-top: 1rem; }
+.play-stage { display: grid; place-items: center; min-height: 340px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; overflow: hidden; }
+.play-soon { display: grid; justify-items: center; gap: .5rem; text-align: center; color: var(--muted); }
+.play-soon span { font-size: 3.5rem; }
+.play-info { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem; }
+.play-info h2 { font-size: 1.1rem; margin-top: 0; }
+.play-info h2:not(:first-child) { margin-top: 1rem; }
+
+@media (max-width: 760px) {
+  .play-layout { grid-template-columns: 1fr; }
+}

@@ -7,6 +7,7 @@ import CoverArt from '../components/CoverArt.jsx';
 import Shot from '../components/Shot.jsx';
 import ScreenshotModal from '../components/ScreenshotModal.jsx';
 import { formatPrice } from '../utils/format.js';
+import { useLibrary } from '../context/LibraryContext.jsx';
 
 const TABS = [
   { key: 'descripcion', label: 'Descripción' },
@@ -20,6 +21,7 @@ export default function GameDetail() {
   const { id } = useParams();
   const { games, loading, error } = useGames();
   const { addToCart, isInCart } = useCart();
+  const { isOwned } = useLibrary();
   const [tab, setTab] = useState('descripcion');
   const [shotIndex, setShotIndex] = useState(null); // null = modal cerrado
 
@@ -53,6 +55,7 @@ export default function GameDetail() {
     : null;
 
   const inCart = isInCart(game.id);
+  const owned = isOwned(game.id);
 
   return (
     <>
@@ -73,13 +76,18 @@ export default function GameDetail() {
 
           <div className="detail-actions">
             <span className="price price-lg">{formatPrice(game.price)}</span>
-            {inCart ? (
-              <Link className="btn btn-ghost" to="/cart">✓ En el carrito · Ver carrito</Link>
-            ) : (
-              <button className="btn btn-primary" onClick={() => addToCart(game)}>
-                {game.price === 0 ? 'Obtener gratis' : 'Comprar'}
-              </button>
-            )}
+            {owned ? (
+  <>
+    <span className="owned-badge">✓ En tu biblioteca</span>
+    <Link className="btn btn-primary" to={`/play/${game.id}`}>▶ Jugar</Link>
+  </>
+) : inCart ? (
+  <Link className="btn btn-ghost" to="/cart">✓ En el carrito · Ver carrito</Link>
+) : (
+  <button className="btn btn-primary" onClick={() => addToCart(game)}>
+    {game.price === 0 ? 'Obtener gratis' : 'Comprar'}
+  </button>
+)}
           </div>
         </div>
       </section>
