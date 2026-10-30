@@ -1,0 +1,39 @@
+/* ===== Mini-juegos ===== */
+.game { display: grid; gap: .75rem; justify-items: center; width: 100%; }
+.game-hud { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: min(100%, 440px); color: var(--muted); }
+.game-hud strong { color: var(--text); }
+
+.game-frame { position: relative; width: min(100%, 440px); }
+.game-canvas { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); background: #0d0e18; touch-action: none; }
+
+.game-overlay { position: absolute; inset: 0; display: grid; align-content: center; justify-items: center; gap: .6rem; text-align: center; padding: 1rem; background: rgba(13, 14, 24, .82); border-radius: 12px; }
+.game-overlay h2 { margin: 0; }
+.game-overlay p { margin: 0; color: var(--muted); }
+
+/* Botones táctiles: solo en celular o pantallas angostas */
+.dpad { display: none; grid-template-areas: ". up ." "left down right"; gap: .4rem; }
+.dpad button { width: 56px; height: 56px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font-size: 1.2rem; cursor: pointer; }
+.dpad button:active { background: var(--line); }
+.dpad .up { grid-area: up; }
+.dpad .left { grid-area: left; }
+.dpad .down { grid-area: down; }
+.dpad .right { grid-area: right; }
+
+@media (pointer: coarse), (max-width: 760px) {
+  .dpad { display: grid; }
+}
+
+/* Memory */
+.memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; padding: .7rem; background: #0d0e18; border: 1px solid var(--line); border-radius: 12px; }
+.mem-card { aspect-ratio: 1; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); font-size: clamp(1.4rem, 6vw, 2.2rem); cursor: pointer; }
+.mem-card:hover { background: var(--line); }
+.mem-card.show { background: var(--surface); color: var(--text); border-color: var(--teal); }
+.mem-card.matched { opacity: .6; border-color: var(--pink); cursor: default; }
+
+/* Tres en Raya */
+.ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; padding: .7rem; background: #0d0e18; border: 1px solid var(--line); border-radius: 12px; }
+.ttt-cell { aspect-ratio: 1; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); font-size: clamp(2.2rem, 10vw, 3.2rem); font-weight: 800; cursor: pointer; color: var(--text); }
+.ttt-cell:hover:not(.x):not(.o) { background: var(--line); }
+.ttt-cell.x { color: var(--teal); cursor: default; }
+.ttt-cell.o { color: var(--pink); cursor: default; }
+.ttt-cell.win { background: var(--surface); border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal) inset; }
