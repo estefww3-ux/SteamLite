@@ -29,3 +29,11 @@
 .mem-card:hover { background: var(--line); }
 .mem-card.show { background: var(--surface); color: var(--text); border-color: var(--teal); }
 .mem-card.matched { opacity: .6; border-color: var(--pink); cursor: default; }
+
+/* Tres en Raya */
+.ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; padding: .7rem; background: #0d0e18; border: 1px solid var(--line); border-radius: 12px; }
+.ttt-cell { aspect-ratio: 1; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); font-size: clamp(2.2rem, 10vw, 3.2rem); font-weight: 800; cursor: pointer; color: var(--text); }
+.ttt-cell:hover:not(.x):not(.o) { background: var(--line); }
+.ttt-cell.x { color: var(--teal); cursor: default; }
+.ttt-cell.o { color: var(--pink); cursor: default; }
+.ttt-cell.win { background: var(--surface); border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal) inset; }
