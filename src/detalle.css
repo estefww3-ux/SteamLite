@@ -1,0 +1,33 @@
+/* ===== Detalle del juego ===== */
+.detail { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin: 1rem 0 2rem; }
+.detail-info h1 { margin: .5rem 0 .25rem; }
+.detail-actions { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; }
+.price-lg { font-size: 1.6rem; font-weight: 700; }
+
+.tabs { display: flex; gap: .5rem; border-bottom: 1px solid var(--line); margin-bottom: 1.25rem; overflow-x: auto; }
+.tab { background: none; border: 0; border-bottom: 3px solid transparent; color: var(--muted); padding: .7rem 1rem; font: inherit; cursor: pointer; white-space: nowrap; }
+.tab:hover { color: var(--text); }
+.tab.is-active { color: var(--text); border-bottom-color: var(--teal); }
+
+.shots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.shot-btn { padding: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); cursor: zoom-in; }
+.shot-btn:hover { border-color: var(--teal); }
+.shot-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.shot-placeholder { display: grid; place-items: center; font-size: 3rem; }
+
+.reviews { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .75rem; }
+.review { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; }
+.review p { margin: .35rem 0 0; }
+.review-head { display: flex; justify-content: space-between; align-items: center; }
+.stars { color: #f9c74f; letter-spacing: 2px; }
+
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, .78); display: grid; place-items: center; padding: 1rem; z-index: 100; }
+.modal { position: relative; width: min(900px, 100%); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; }
+.modal .shot-img { border-radius: 10px; max-height: 70vh; }
+.modal-close { position: absolute; top: .5rem; right: .5rem; z-index: 1; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); cursor: pointer; }
+.modal-nav { display: flex; justify-content: space-between; align-items: center; margin-top: .75rem; }
+
+@media (max-width: 760px) {
+  .detail { grid-template-columns: 1fr; }
+  .shots-grid { grid-template-columns: 1fr; }
+}
