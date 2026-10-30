@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../detalle.css';
+import { useCart } from '../context/CartContext.jsx';
 import { Link, useParams } from 'react-router-dom';
 import useGames from '../hooks/useGames.js';
 import CoverArt from '../components/CoverArt.jsx';
@@ -18,6 +19,7 @@ const stars = (n) => '★'.repeat(n) + '☆'.repeat(5 - n);
 export default function GameDetail() {
   const { id } = useParams();
   const { games, loading, error } = useGames();
+  const { addToCart, isInCart } = useCart();
   const [tab, setTab] = useState('descripcion');
   const [shotIndex, setShotIndex] = useState(null); // null = modal cerrado
 
@@ -50,9 +52,7 @@ export default function GameDetail() {
     ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
     : null;
 
-  const handleBuy = () => {
-    // TODO feature/carrito: addToCart(game)
-  };
+  const inCart = isInCart(game.id);
 
   return (
     <>
@@ -73,9 +73,13 @@ export default function GameDetail() {
 
           <div className="detail-actions">
             <span className="price price-lg">{formatPrice(game.price)}</span>
-            <button className="btn btn-primary" onClick={handleBuy}>
-              {game.price === 0 ? 'Obtener gratis' : 'Comprar'}
-            </button>
+            {inCart ? (
+              <Link className="btn btn-ghost" to="/cart">✓ En el carrito · Ver carrito</Link>
+            ) : (
+              <button className="btn btn-primary" onClick={() => addToCart(game)}>
+                {game.price === 0 ? 'Obtener gratis' : 'Comprar'}
+              </button>
+            )}
           </div>
         </div>
       </section>
