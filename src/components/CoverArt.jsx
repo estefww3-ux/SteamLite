@@ -7,7 +7,11 @@ export default function CoverArt({ game, className = '' }) {
       role="img"
       aria-label={`Portada de ${game.title}`}
     >
-      <span className="cover-emoji">{game.emoji}</span>
+      {game.image ? (
+        <img src={game.image} alt="" className="cover-img" loading="lazy" />
+      ) : (
+        <span className="cover-emoji">{game.emoji}</span>
+      )}
     </div>
   );
 }

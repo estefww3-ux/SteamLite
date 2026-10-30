@@ -11,6 +11,7 @@
     "releaseDate": "2024-03-12",
     "emoji": "🐍",
     "colors": ["#12c2a6", "#1b2a6b"],
+    "image": "/images/neon_snake.jpg",
     "gameKey": "snake",
     "featured": true,
     "reviews": [
@@ -30,6 +31,7 @@
     "releaseDate": "2024-05-02",
     "emoji": "🏓",
     "colors": ["#ff7a59", "#7b2cbf"],
+    "image": "/images/pong_rivals.jpg",
     "gameKey": "pong",
     "featured": true,
     "reviews": [
@@ -48,6 +50,7 @@
     "releaseDate": "2024-07-19",
     "emoji": "🧱",
     "colors": ["#f9c74f", "#d62828"],
+    "image": "/images/brick_breaker.jpg",
     "gameKey": "breakout",
     "featured": true,
     "reviews": [
@@ -66,6 +69,7 @@
     "releaseDate": "2024-02-08",
     "emoji": "🧠",
     "colors": ["#4cc9f0", "#4361ee"],
+    "image": "/images/memory_match.jpg",
     "gameKey": "memory",
     "featured": false,
     "reviews": [
@@ -84,6 +88,7 @@
     "releaseDate": "2024-01-15",
     "emoji": "❌",
     "colors": ["#90be6d", "#277da1"],
+    "image": "/images/tres_en_raya.jpg",
     "gameKey": "tictactoe",
     "featured": false,
     "reviews": [
@@ -102,6 +107,7 @@
     "releaseDate": "2024-09-27",
     "emoji": "🐦",
     "colors": ["#a0e7e5", "#ff6b9d"],
+    "image": "/images/sky_flap.jpg",
     "gameKey": "flappy",
     "featured": false,
     "reviews": [

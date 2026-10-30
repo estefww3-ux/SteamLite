@@ -69,6 +69,8 @@ p { margin: 0 0 .75rem; }
 .card-body p { margin: 0; font-size: .9rem; }
 .card-foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; }
 .price { font-weight: 700; }
+.cover { aspect-ratio: 16/9; border-radius: 10px; display: grid; place-items: center; position: relative; overflow: hidden; }
+.cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 .empty { text-align: center; padding: 3rem 1rem; color: var(--muted); display: grid; gap: .75rem; justify-items: center; }
 .footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .9rem; }
